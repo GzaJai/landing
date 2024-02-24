@@ -83,12 +83,14 @@ nav a:hover {
 
 #hero a {
     width: 6rem;
-    margin: 0 calc(50dvw - 1rem);
+    margin: 0 auto;
     background-color: transparent;
     border: 0;
     color: #FFFFFF;
     font-size: 1.4rem;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 #hero a:hover {
@@ -101,6 +103,7 @@ nav a:hover {
 
 #info {
     margin: 8.9dvh auto 0;
+    width: 100%;
     padding: 5dvh 0 10dvh;
     color: #FFFFFF;
     background-color: #2F5663;
@@ -124,12 +127,14 @@ nav a:hover {
 
 .info-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
 .info-content .info-text {
-    width: 40rem;
+    width: 80%;
+    margin: 0 auto;
     & h3 {
         font-size: 1.7rem;
         margin: 0 0 3rem;
@@ -342,9 +347,11 @@ footer {
     padding: 2rem 10%;
     color: #FFFFFF;
     height: 30dvh;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     & h2 {
         font-size: 2rem;
     }
@@ -355,17 +362,103 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
         & a {
-            margin: 0 1rem;
-            padding: 2rem;
+            padding: 1rem;
             text-align: center;
             justify-content: center;
         }
         & a:hover {
             background-color: #D8B188;
             border-radius: 50%;
-            padding: 2rem; 
+            padding: 1rem; 
         }
     }
 
+}
+
+
+/* Global Styles */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        height: auto;
+    }
+    nav li {
+        margin: 5px 0;
+        & a {
+            font-size: 1rem;
+        }
+    }
+    .nav-hr {
+        width: 95%;
+    }
+
+    #hero {
+        padding: 0 10px;
+        height: 100dvh;
+    }
+    .hero-content {
+        width: 60%;
+        margin: 10vh auto;
+        & .hero-title {
+            font-size: 1.2rem;        }
+        & .hero-text {
+            font-size: 1rem;
+        }
+    }
+
+    #info {
+        padding: 20px 10px;
+        margin: -13.8dvh 0 0;
+    }
+    .info-content {
+        flex-direction: column-reverse;
+    }
+    .info-content img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #services article {
+        width: 90%;
+        & .service-content {
+            & h3 {
+                font-size: 1.2rem;
+            }
+            & ul li, ul .first-li {
+                font-size: 1rem;
+            }
+            & button {
+                font-size: 1.2rem;
+                width: 60%;
+            }
+        }
+    }
+    .service-content {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+
+    #contact form {
+        flex-direction: column;
+    }
+    .mail-body, .sender-data {
+        width: 100%;
+        height: auto;
+    }
+    .mail-body textarea, .sender-data input {
+        margin: 10px 0;
+    }
+
+    footer {
+        padding: 20px 10px;
+        height: auto;
+    }
+    .footer-a a {
+        margin: 0 5px;
+    }
 }
