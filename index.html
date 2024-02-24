@@ -14,7 +14,7 @@
         <nav>
             <li><a href="">Inicio</a></li>
             <li><a href="#info">Información</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </nav>
         <hr class="nav-hr"/>
     </header>
@@ -32,10 +32,9 @@
                 </div>
             </div>
             <a href="#info">
-                <img src="arrow-down.svg" alt="">
+                <img src="https://raw.githubusercontent.com/GzaJai/landing/main/imagenes/arrow-down.svg" alt="">
             </a>
         </section>
-
         <section id="info">
 
             <h2 class="section-title">
@@ -75,7 +74,78 @@
                 </div>
             </article>
         </section>
+        <section id="services">
+
+            <h2 class="section-title">
+                Servicios
+            </h2>
+            <hr />
+            
+            <article>
+                <div class="service-content">
+                        <h3>LANDING PAGE</h3>
+                        <ul>
+                            <li class="first-li">Registro de Dominio</li>
+                            <li>Certificado SSL</li>
+                            <li>1 página</li>
+                            <li>1 Cuenta correo corportativo</li>
+                            <li>Slider de propuestas destacadas</li>
+                            <li>1 Formulario de Contacto</li>
+                            <li>1 Galería de fotos</li>
+                            <li>Enlace con Redes Sociales</li>
+                            <li>Alta en Google Search Console</li>
+                        </ul>
+                        <button>
+                            Más Información
+                        </button>
+
+        </section>
+        <section id="contact">
+
+            <h2 class="section-title">
+                Contacto
+            </h2>
+            <hr />
+
+            <h3>
+                Contacta conmigo a través de mi email.
+            </h3>
+
+            <form id="form">
+                <div class="mail-body">
+                  <textarea type="text" id="message" placeholder="Escriba aquí su mensaje..."></textarea>
+                </div>
+                <div class="sender-data">
+                    <input class="sender-data-field" type="text" id="from_email" placeholder="Tu Email">
+                    <input class="sender-data-field" type="text" id="from-name" placeholder="Tu nombre">
+                    <input class="send-btn" type="submit" id="button" value="Enviar Email" >
+                    <span id="sent-message" class="sent-message"></span>
+                </div>
+              </form>
+              
+              <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+              
+              <script type="text/javascript">
+                emailjs.init('Nr3UxuL9mkca_rnnB')
+              </script>
+        </section>
     </main>
+    <footer>
+        <div class="footer-name">
+            <h2>Gonzalo Jaime</h2>
+            <h3>Desarrollador Web</h3>
+        </div>
+        <div class="footer-a">
+            <a href="https://github.com/GzaJai">
+                <img src="imagenes/github.svg" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/gjaimeguinazu/">
+                <img src="imagenes/linkedin.svg" alt="">
+            </a>
+        </div>
+    </footer>
+    <script src="contact.js"></script>
 </body>
 
 </html>
