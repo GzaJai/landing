@@ -107,6 +107,8 @@ nav a:hover {
     padding: 5dvh 0 10dvh;
     color: #FFFFFF;
     background-color: #2F5663;
+    display: flex;
+    flex-direction: column;
 }
 #info hr {
     width: 90%;
@@ -123,31 +125,37 @@ nav a:hover {
 #info article {
     width: 80%;
     margin: 5dvh auto 0;
+    display: flex;
 }
 
 .info-content {
+    width: 90%;
+    margin: 2rem auto 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
     justify-content: space-around;
     align-items: center;
 }
 
-.info-content .info-text {
-    width: 80%;
-    margin: 0 auto;
+.info-text {
+    max-width: 30rem;
+    margin: 1rem 0;
+    height: fit-content;
     & h3 {
         font-size: 1.7rem;
         margin: 0 0 3rem;
     }
     & li {
         font-size: 1.2rem;
-        width: 100%;
+        width: 90%;
         margin: 0 0 0 3rem;
     }
 }
 
 .info-content img {
     width: 30rem;
+    margin: 1rem 0;
     box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.4);
 }
 
@@ -413,9 +421,15 @@ footer {
     #info {
         padding: 20px 10px;
         margin: -13.8dvh 0 0;
-    }
+        }
+    
     .info-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        width: 90%;
+        & .info-text li {
+            width: 100%;
+            margin: 0 auto;
+        }
     }
     .info-content img {
         width: 100%;
@@ -442,16 +456,31 @@ footer {
         margin: 20px 0;
     }
 
-
-    #contact form {
-        flex-direction: column;
+    #contact {
+        & h3 {
+            margin: 2rem 7% 3rem;
+        }
+        form {
+            flex-direction: column;
+        }
     }
+    
     .mail-body, .sender-data {
         width: 100%;
         height: auto;
     }
     .mail-body textarea, .sender-data input {
         margin: 10px 0;
+    }
+
+    .sent-message-ok {
+        height: 30%;
+        text-align: center;
+        margin: 1.5rem;
+        padding: .5rem 2rem;
+        background-color: #D9D9D9;
+        color: #2F5663;
+        font-weight: 500;
     }
 
     footer {
